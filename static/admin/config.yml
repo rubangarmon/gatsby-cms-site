@@ -1,0 +1,22 @@
+backend:
+  # name: test-repo
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: blog
+    label: Blog
+    folder: content/blog
+    create: true
+    slug: "{{slug}}"
+    fields:
+      # - {label: "Title", name: "title", widget: "string"}
+      # - {label: "Description", name: "description", widget: "string"}      
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: date, label: Date, widget: "string" }
+      - { name: description, label: Description, widget: "string" }
+      # - { name: thumbnail, label: Thumbnail, widget: image }
+      # - {label: "Body", name: "body", widget: "markdown"}
